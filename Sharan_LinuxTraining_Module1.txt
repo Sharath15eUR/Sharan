@@ -17,7 +17,7 @@ dir1/dir2/file and create a softlink for file inside dir1)
 
 admin@Ubuntu:~/EmbedURTrainin/mod1$ mkdir -p dir1/dir2
 admin@Ubuntu:~/EmbedURTrainin/mod1$ touch dir1/dir2/q3.txt
-admin@Ubuntu:~/EmbedURTrainin/mod1$ ln -s dir1/dir2/q3.txt dir1/file_link
+admin@Ubuntu:~/EmbedURTrainin/mod1$ ln -s EmbedURTrainin/mod1/q5/dir1/dir2/q3.txt dir1/file_link
 admin@Ubuntu:~/EmbedURTrainin/mod1$ ls -l dir1/dir2/q3.txt dir1/file_link
 -rw-rw-r-- 1 admin admin  0 Jan 22 19:21 dir1/dir2/q3.txt
 lrwxrwxrwx 1 admin admin 16 Jan 22 19:23 dir1/file_link -> dir1/dir2/q3.txt
