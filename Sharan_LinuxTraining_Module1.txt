@@ -1,0 +1,45 @@
+Q1: Create a file and add executable permission to all users (user, group and others)
+
+admin@Ubuntu:~/EmbedURTrainin/mod1$ touch q1.txt
+admin@Ubuntu:~/EmbedURTrainin/mod1$ chmod a+x q1.txt
+admin@Ubuntu:~/EmbedURTrainin/mod1$ ls -l q1.txt
+-rwxrwxr-x 1 admin admin 0 Jan 22 19:14 q1.txt
+
+Q2: create a file and remove write permission for group user alone.
+
+admin@Ubuntu:~/EmbedURTrainin/mod1$ touch q2.txt
+admin@Ubuntu:~/EmbedURTrainin/mod1$ chmod g-w q2.txt
+admin@Ubuntu:~/EmbedURTrainin/mod1$ ls -l q2.txt
+-rw-r--r-- 1 admin admin 0 Jan 22 19:18 q2.txt
+
+Q3:Create a file and add a softlink to the file in different directory (Eg : Create a file in
+dir1/dir2/file and create a softlink for file inside dir1)
+
+admin@Ubuntu:~/EmbedURTrainin/mod1$ mkdir -p dir1/dir2
+admin@Ubuntu:~/EmbedURTrainin/mod1$ touch dir1/dir2/q3.txt
+admin@Ubuntu:~/EmbedURTrainin/mod1$ ln -s dir1/dir2/q3.txt dir1/file_link
+admin@Ubuntu:~/EmbedURTrainin/mod1$ ls -l dir1/dir2/q3.txt dir1/file_link
+-rw-rw-r-- 1 admin admin  0 Jan 22 19:21 dir1/dir2/q3.txt
+lrwxrwxrwx 1 admin admin 16 Jan 22 19:23 dir1/file_link -> dir1/dir2/q3.txt
+
+Q4:Use ps command with options to display all active process running on the system
+
+admin@Ubuntu:~/EmbedURTrainin/mod1$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.2  0.3  23012 13768 ?        Ss   19:12   0:01 /sbin/init sp
+root           2  0.0  0.0      0     0 ?        S    19:12   0:00 [kthreadd]
+....
+....
+
+Q5: Create 3 files in a dir1 and re-direct the output of list command with sorted by timestamp
+of the files to a file
+
+admin@Ubuntu:~/EmbedURTrainin/mod1/q5$ mkdir dir1
+admin@Ubuntu:~/EmbedURTrainin/mod1/q5$ touch dir1/file1.txt dir1/file2.txt dir1/file3.txt
+admin@Ubuntu:~/EmbedURTrainin/mod1/q5$ ls -lt dir1 > dir1/sorted_file.txt
+admin@Ubuntu:~/EmbedURTrainin/mod1/q5$ cat dir1/sorted_file.txt
+total 0
+-rw-rw-r-- 1 admin admin 0 Jan 22 19:27 sorted_file.txt
+-rw-rw-r-- 1 admin admin 0 Jan 22 19:27 file1.txt
+-rw-rw-r-- 1 admin admin 0 Jan 22 19:27 file2.txt
+-rw-rw-r-- 1 admin admin 0 Jan 22 19:27 file3.txt
