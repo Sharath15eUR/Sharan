@@ -1,0 +1,4 @@
+admin@Ubuntu:~/EmbedURTrainin/mod1$ touch q1.txt
+admin@Ubuntu:~/EmbedURTrainin/mod1$ chmod a+x q1.txt
+admin@Ubuntu:~/EmbedURTrainin/mod1$ ls -l q1.txt
+-rwxrwxr-x 1 admin admin 0 Jan 22 19:14 q1.txt

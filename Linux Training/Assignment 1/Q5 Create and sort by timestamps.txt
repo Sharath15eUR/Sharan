@@ -1,0 +1,9 @@
+admin@Ubuntu:~/EmbedURTrainin/mod1/q5$ mkdir dir1
+admin@Ubuntu:~/EmbedURTrainin/mod1/q5$ touch dir1/file1.txt dir1/file2.txt dir1/file3.txt
+admin@Ubuntu:~/EmbedURTrainin/mod1/q5$ ls -lt dir1 > dir1/sorted_file.txt
+admin@Ubuntu:~/EmbedURTrainin/mod1/q5$ cat dir1/sorted_file.txt
+total 0
+-rw-rw-r-- 1 admin admin 0 Jan 22 19:27 sorted_file.txt
+-rw-rw-r-- 1 admin admin 0 Jan 22 19:27 file1.txt
+-rw-rw-r-- 1 admin admin 0 Jan 22 19:27 file2.txt
+-rw-rw-r-- 1 admin admin 0 Jan 22 19:27 file3.txt
