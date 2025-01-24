@@ -1,2 +1,0 @@
-admin@Ubuntu:~$ netstat -rn | awk '$1 == "0.0.0.0" {print $2}' |sort
-10.0.2.2
