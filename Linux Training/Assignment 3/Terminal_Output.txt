@@ -1,0 +1,35 @@
+admin@Ubuntu:~/EmbedURTrainin/mod3$ ls
+backup  backupexists  dir1  dir2  script.sh  test  test.sh
+admin@Ubuntu:~/EmbedURTrainin/mod3$ cd dir1/dir2
+admin@Ubuntu:~/EmbedURTrainin/mod3/dir1/dir2$ ls
+file1.txt  file2.txt  file3.txt
+admin@Ubuntu:~/EmbedURTrainin/mod3/dir1/dir2$ cd ../..
+admin@Ubuntu:~/EmbedURTrainin/mod3$ ./script.sh ./dir1/dir2 ./backupproper .txt
+Matching Records: 
+file2.txt 25
+file3.txt 24
+file1.txt 25
+Copied: ./dir1/dir2/file2.txt to ./backupproper/file2.txt
+Copied: ./dir1/dir2/file3.txt to ./backupproper/file3.txt
+Copied: ./dir1/dir2/file1.txt to ./backupproper/file1.txt
+Backup Complete. Report saved to ./backupproper/backup_report.log.
+admin@Ubuntu:~/EmbedURTrainin/mod3$ cat backupproper/backup_report.log
+Backup Summary: 
+Total Files Processed: 3
+Total Size of files backed up: 74 bytes
+Backup Dir: ./backupproper
+admin@Ubuntu:~/EmbedURTrainin/mod3$ ./script.sh ./dir1/dir2 ./backupexists .txt
+Matching Records: 
+file2.txt 25
+file3.txt 24
+file1.txt 25
+Skipped: Newer file exists.
+Skipped: Newer file exists.
+Skipped: Newer file exists.
+Backup Complete. Report saved to ./backupexists/backup_report.log.
+admin@Ubuntu:~/EmbedURTrainin/mod3$ cat backupexists/backup_report.log
+Backup Summary: 
+Total Files Processed: 0
+Total Size of files backed up: 0 bytes
+Backup Dir: ./backupexists
+

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+Source_DIR="$1"
+Backup_DIR="$2"
+File_EXT="$3" 
+FILES=($(find "$Source_DIR" -type f -name "*${File_EXT}"))
+export Backup_count=0
+Total_Size=0
+if [ ${#FILES[@]} -eq 0 ]; then
+	echo "No files with the extension '$File_EXT' in '$Source_DIR'."
+	exit 1
+fi
+echo "Matching Records: "
+for FILE in "${FILES[@]}"; do
+	File_size=$(stat -c%s "$FILE")
+	echo "$(basename "$FILE") $File_size"
+done
+mkdir -p "$Backup_DIR" || { echo "Error in creating backup."; exit 1; }
+for FILE in "${FILES[@]}"; do
+	dest_file="$Backup_DIR/$(basename "$FILE")"
+	if [ ! -f "$dest_file" ] || [ "$FILE" -nt "$dest_file" ]; then
+		cp "$FILE" "$dest_file"
+		echo "Copied: $FILE to $dest_file"
+		((Backup_count++))
+		File_size=$(stat -c%s "$FILE")
+		Total_Size=$((Total_Size + File_size))
+	else
+		echo "Skipped: Newer file exists."
+	fi
+done
+
+Report_File="$Backup_DIR/backup_report.log"
+echo "Backup Summary: " > "$Report_File"
+echo "Total Files Processed: $Backup_count" >> "$Report_File"
+echo "Total Size of files backed up: $Total_Size bytes" >> "$Report_File"
+echo "Backup Dir: $Backup_DIR" >> "$Report_File"
+echo "Backup Complete. Report saved to $Report_File."
