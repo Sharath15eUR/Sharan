@@ -1,0 +1,22 @@
+admin@Ubuntu:~/EmbedURTrainin/mod5$ ./file_analyzer.sh -d dir1 -k xyz
+Match found in: dir1/dir4/file4.txt
+admin@Ubuntu:~/EmbedURTrainin/mod5$ ./file_analyzer.sh -d dir1 -k abcdef
+Match found in: dir1/dir2/file.txt
+Match found in: dir1/dir3/file3.txt
+admin@Ubuntu:~/EmbedURTrainin/mod5$ ./file_analyzer.sh -d dir5 -k xyz
+[Fri Jan 31 01:34:30 PM IST 2025] ERROR: Error: Directory dir5 does not exist. 
+admin@Ubuntu:~/EmbedURTrainin/mod5$ ./file_analyzer.sh -f dir5 -k xyz
+[Fri Jan 31 01:34:39 PM IST 2025] ERROR: Error: File 'dir5' does not exist. 
+admin@Ubuntu:~/EmbedURTrainin/mod5$ ./file_analyzer.sh -f test.txt -k xyz
+[Fri Jan 31 01:34:45 PM IST 2025] ERROR: No Match found. 
+admin@Ubuntu:~/EmbedURTrainin/mod5$ ./file_analyzer.sh -f test.txt -k abcdef
+Match found in the file.
+admin@Ubuntu:~/EmbedURTrainin/mod5$ ./file_analyzer.sh --help
+Usage: ./file_analyzer.sh [OPTIONS]
+
+Options:
+	-d <directory> Search recursively in a directory for the keyword
+	-f <file>      Seach for a keyword in a specific file
+	-k <keyword>   Keyword to search for
+	--help         Display this help message
+
