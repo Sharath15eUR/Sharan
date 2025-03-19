@@ -124,17 +124,17 @@ Aliases:  www.cisco.com
 ```
 ## Q2) Use Wireshark to capture and analyze DNS, TCP, UDP traffic and packet header, packet flow, options and flags
 
-### DNS:  
+### DNS:  (Flags are explanded in the packet frame analysis, also includes the source and dest)
 ![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/2_1.png)    
 ![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/2_2.png) 
 
 ---
-### TCP:  
+### TCP:  (Flags are explanded in the packet frame analysis, also includes the source and dest)
 ![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/2_3.png)   
 ![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/2_4.png)    
 
 ---
-### UDP:  
+### UDP: (Flags are explanded in the packet frame analysis, also includes the source and dest)
 ![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/2_5.png)   
 ![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/2_6.png)    
 
@@ -245,29 +245,171 @@ For each hop it shows the
 
 ## Q9) You configured VLANs 10 and 20 on your switch and assigned ports to each VLAN. However, devices in VLAN 10 cannot communicate with devices in VLAN 20. Troubleshoot the issue.
 
+### Addressing the Issue:
+ - Issue is devices from VLAN say 10 cant communicate with devices in VLAN 20.
+ - This is the expected behavior since we set up a VLAN.
+
+### Solution
+ - One solution to make devices from VLAN 10 communicate with VLAN 20 is by Inter VLAN routing with a router after the switch.
+ - Configure like mentioned in the next question and that should solve the issue.
+
+---
 ## Q10) Try Inter VLAN routing with Router
 ### CISCO Packet Tracer Setup:
 ![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/10_1.png)    
 
 ---
-### Configuring the Router:
+### Configuring the Switch:
 ![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/10_2.png)     
 
 ---  
-### Testing the connectivity b/w devices from different VLAN:
+### COnfiguring the Router:
+```
+Router(config-if)#conf t
+%Invalid hex value
+Router(config)#
+Router(config)#int f0/0
+Router(config-if)#no shutdown
+Router(config-if)#
+Router(config-if)#int f0/0.10
+Router(config-subif)#  
+%LINK-5-CHANGED: Interface FastEthernet0/0.10, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.10, changed state to up
+
+Router(config-subif)#enc
+Router(config-subif)#encapsulation dot1Q 10
+Router(config-subif)#ip address 192.168.10.10 255.255.255.0
+Router(config-subif)#ex
+Router(config)#
+Router(config)#int f0/0.20
+Router(config-subif)#  
+%LINK-5-CHANGED: Interface FastEthernet0/0.20, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.20, changed state to up
+
+Router(config-subif)#enca
+Router(config-subif)#encapsulation dot1Q 20
+Router(config-subif)#ip address 192.168.10.20 255.255.255.0
+                              ^
+% Invalid input detected at '^' marker.
+
+Router(config-subif)#ip address 192.168.10.20 255.255.255.0
+% 192.168.10.0 overlaps with FastEthernet0/0.10
+Router(config-subif)#ip address 192.168.20.10 255.255.255.0
+Router(config-subif)#ex
+Router(config)#
+Router(config)#
+
+```
+### Testing the connectivity:
 ![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/10_3.png)     
 
 ---  
 ## Q11) Implement ACLs to restrict traffic based on source and destination ports. Test rules by simulating legitimate and unauthorized traffic.
 
+### Configuring the Router to allow based on source:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/10_4.png)    
+
+---
+### ICMP from a valid Source:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/10_5.png)     
+
+--- 
+### ICMP from a invalid Source:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/10_6.png)     
+
+--- 
 ## Q12) Configure a standard Access Control List (ACL) on a router to permit traffic from a specific IP range. Test connectivity to verify the ACL is working as intended.
 
+### Configuring the Router to allow IP based on the given range:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/10_7.png)    
+
+---
+### ICMP from a valid Source:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/10_8.png)     
+
+--- 
+### ICMP from a invalid Source:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/10_9.png)     
+
+--- 
 ## Q13) Create an extended ACL to block specific applications, such as HTTP or FTP traffic. Test the ACL rules by attempting to access blocked services.
+
+### Configuring to block http connections:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/10_10.png)     
+
+--- 
+### Trying to access the server:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/10_11.png)     
+
+--- 
 
 ## Q14) Try Static NAT, Dynamic NAT and PAT to translate IPs
 
+### CISCO PACKET Tracer Setup:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/14_1.png)     
+
+--- 
+## Q14) Try Static NAT, Dynamic NAT and PAT to translate IPs
+
+### CISCO PACKET Tracer Setup:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/14_1.png)     
+
+--- 
+### Setting up Static NAT:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/14_2.png)     
+
+---
+
+### NAT Translation Table for Static NAT:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/14_3.png)     
+
+--- 
+### Setting up Dynamic NAT:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/14_4.png)     
+
+--- 
+### NAT Translation Table for Dynamic NAT:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/14_5.png)     
+
+--- 
+### Setting up PAT:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/14_6.png)     
+
+--- 
+### NAT TRanslation Table for PAT:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/14_7.png)     
+
+--- 
 ## Q15) Download iperf in laptop/phone and make sure they are in same network. Try different iperf commands with tcp, udp, bidirectional, reverse, multicast, parallel options and analyze the bandwidth and rate of transmission, delay, jitter etc.
 
+### TCP:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/15_1.png)     
+
+--- 
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/15_2.jpg)     
+
+---
+### UDP:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/15_3.png)     
+
+--- 
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/15_4.jpg)     
+
+--- 
+### Reverse:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/15_5.png)     
+
+--- 
+### Bi-Directional:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/15_6.png)     
+
+--- 
+### Jitter:
+![Q1_1](https://github.com/SharanxD/LinuxTraining/blob/main/Networking/Results-Mod7%268/15_7.png)     
+
+--- 
 
 ---
 END of ASSIGNMENT for Module 7 and 8
