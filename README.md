@@ -15,6 +15,7 @@
     2. [Module 3 and 4](https://github.com/Sharath15eUR/Sharan/blob/main/Networking/Module3%264.md) -  Packet Capturing and Analyzing using Cisco Packet Tracer,GNS3 and Wireshark and linux kernel.
     3. [Module 5](https://github.com/Sharath15eUR/Sharan/blob/main/Networking/Module5.md) -  ARP,ARP Spoofing, DHCP,IP Addressing, Subnetting, NAT.
     4. [Module 6](https://github.com/Sharath15eUR/Sharan/blob/main/Networking/Module6.md) -  ARP,Routing,IP Addressing, Subnetting, NAT.
+    5. [Module 7&8](https://github.com/Sharath15eUR/Sharan/blob/main/Networking/Module7&8.md) -  Test-Connection, TraceRT, VLAN and TRUNK ports, Inter VLAN, ACLs, Iperf
     
 ---
 ## Submission by:
