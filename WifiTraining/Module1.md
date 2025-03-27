@@ -156,7 +156,7 @@ The standard designed in 1999 alongside the 802.11a for longer range and better 
 ![Properties 2ghz](https://github.com/SharanxD/LinuxTraining/blob/main/WifiTraining/Images/Mod1/Q7_2.png)  
  - Similarly go to the same settings page and select 5Ghz and deselect 2.4Ghz for 5Ghz only transmission.
  - We can see the following properties:  
-![Properties 5ghz](https://github.com/SharanxD/LinuxTraining/blob/main/WifiTraining/Images/Mod1/Q7_3.jpg)  
+![Properties 5ghz](https://github.com/SharanxD/LinuxTraining/blob/main/WifiTraining/Images/Mod1/Q7_3.png)  
 
 ### Key observations made:
  - The range in 2.4Ghz gets reduced drastically in 5 Ghz only mode.
