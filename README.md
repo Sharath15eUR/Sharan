@@ -16,6 +16,9 @@
     3. [Module 5](https://github.com/Sharath15eUR/Sharan/blob/main/Networking/Module5.md) -  ARP,ARP Spoofing, DHCP,IP Addressing, Subnetting, NAT.
     4. [Module 6](https://github.com/Sharath15eUR/Sharan/blob/main/Networking/Module6.md) -  ARP,Routing,IP Addressing, Subnetting, NAT.
     5. [Module 7&8](https://github.com/Sharath15eUR/Sharan/blob/main/Networking/Module7&8.md) -  Test-Connection, TraceRT, VLAN and TRUNK ports, Inter VLAN, ACLs, Iperf
+
+ - **WIFI Training**
+    1. [Module 1](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module1.md) -  OSI Layer, IEEE Standards, Wifi Topolgies
     
 ---
 ## Submission by:
