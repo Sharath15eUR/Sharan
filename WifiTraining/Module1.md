@@ -147,7 +147,22 @@ The standard designed in 1999 alongside the 802.11a for longer range and better 
 
 ---
 ## Q7) Configure your modem/hotspot to operate only in 2.4Ghz and connect your laptop/Wi-Fi device, and capture the capability/properties in your Wi-Fi device. Repeat the same in 5Ghz and tabulate all the differences you observed during this.
- 
+### To change the Wifi band settings:
+ - Open the wifi router (either using the router app or using browser and using the 192.168.68.1)
+ - Go to the wifi settings, and proceed to advanced.
+ - Choose Band, and deselect 5Ghz for only 2.4Ghz transmission.
+![Settings](https://github.com/SharanxD/LinuxTraining/blob/main/WifiTraining/Images/Mod1/Q7_1.jpg)  
+ - We can see the following properties:  
+![Properties 2ghz](https://github.com/SharanxD/LinuxTraining/blob/main/WifiTraining/Images/Mod1/Q7_2.png)  
+ - Similarly go to the same settings page and select 5Ghz and deselect 2.4Ghz for 5Ghz only transmission.
+ - We can see the following properties:  
+![Properties 5ghz](https://github.com/SharanxD/LinuxTraining/blob/main/WifiTraining/Images/Mod1/Q7_3.jpg)  
+
+### Key observations made:
+ - The range in 2.4Ghz gets reduced drastically in 5 Ghz only mode.
+ - The speed also increases in 5Ghz once within range (40 mbps in 2.4 to 160 Mbps in 5Ghz).
+
+
 ---
 ## Q8) What is the difference between IEEE and WFA?
 ### IEEE (Institute of Electrical and Electronics Engineers)	:
@@ -176,9 +191,10 @@ The Wi-Fi Alliance (WFA) is an industry group that promotes Wi-Fi technology and
 |Wi-Fi Mesh|	300 Mbps – 2 Gbps|	Moderate|	Home Wi-Fi systems|	Google Nest, Eero|
 |Satellite|	100 Mbps – 1 Gbps|	High	|Remote areas|	Starlink, Viasat|
 |4G/5G Cellular|	100 Mbps – 10 Gbps|	Low|	Mobile broadband, rural ISPs|	5G FWA|
-
-Fiber Optic is the internet connectivity backhaul for the house along with the properties as below:
-
+  
+Fiber Optic is the internet connectivity backhaul for the house along with the properties as below:  
+![Properties](https://github.com/SharanxD/LinuxTraining/blob/main/WifiTraining/Images/Mod1/Q9.png)   
+   
 ---
 Q10) List down the Wi-Fi topologies and use cases of each one.
 
