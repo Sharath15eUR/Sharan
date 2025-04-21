@@ -21,6 +21,7 @@
     1. [Module 1](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module1.md) -  OSI Layer, IEEE Standards, Wifi Topolgies
     2. [Module 2](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module2.md) -  SplitMAC, CAPWAP, APs, WLCs, Sniffer Mode and Monitor Mode.
     3. [Module 3](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module3.md) - DSSS,FHSS,PHY Layer, OFDM, OFDMA, MIMO ,MU-MIMO, PPDU
+    4. [Module 4](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module4.md) - MAC Layer, Scanning, EAPOL, Block ACK, MSDU,MPDU etc
     
 ---
 ## Submission by:
