@@ -111,19 +111,19 @@ As wireless networks became more widespread and security concerns grew, WPA2 bec
 ## Q7. How does the 4-way handshake ensure mutual authentication between the client and the access point?
 ### How the 4-Way Handshake Ensures Mutual Authentication
 **1. Initial Validation with PMK**  
-Both the client (STA) and the access point (AP) already share the Pairwise Master Key (PMK) after the authentication process (via PSK or 802.1X). This shared secret is fundamental for the authentication process.
+   - Both the client (STA) and the access point (AP) already share the Pairwise Master Key (PMK) after the authentication process (via PSK or 802.1X). This shared secret is fundamental for the authentication process.
 
 **2. Message 1 – AP Sends a Nonce**  
-The AP generates and sends a nonce (a random number) to the client in the first message. This ensures the freshness of the session and is essential for deriving the Pairwise Transient Key (PTK). At this point, the client knows the AP is legitimate because the AP has initiated the handshake.
+  - The AP generates and sends a nonce (a random number) to the client in the first message. This ensures the freshness of the session and is essential for deriving the Pairwise Transient Key (PTK). At this point, the client knows the AP is legitimate because the AP has initiated the handshake.
 
 **3. Message 2 – Client Responds with Nonce and MIC**  
-The client uses the PMK, the AP’s nonce, its own nonce, and MAC addresses to generate the PTK. It then sends the second message back to the AP, which includes the client’s nonce and a Message Integrity Code (MIC). The MIC verifies the integrity of the message and proves the client knows the PMK, confirming the client’s legitimacy.
+  - The client uses the PMK, the AP’s nonce, its own nonce, and MAC addresses to generate the PTK. It then sends the second message back to the AP, which includes the client’s nonce and a Message Integrity Code (MIC). The MIC verifies the integrity of the message and proves the client knows the PMK, confirming the client’s legitimacy.
 
 **4. Message 3 – AP Verifies MIC and Sends Confirmation**  
-The AP verifies the MIC from the client’s response. If the MIC is valid, it confirms the client knows the PMK. The AP also sends its own MIC in this message to authenticate itself to the client.
+  - The AP verifies the MIC from the client’s response. If the MIC is valid, it confirms the client knows the PMK. The AP also sends its own MIC in this message to authenticate itself to the client.
 
 **5. Message 4 – Client Verifies AP’s MIC**  
-Finally, the client checks the MIC in the AP's response. If the MIC is valid, the client confirms the AP knows the PMK, completing mutual authentication.
+  - Finally, the client checks the MIC in the AP's response. If the MIC is valid, the client confirms the AP knows the PMK, completing mutual authentication.
 
 ---
 ## Q8. What will happen if we put a wrong passphrase during a 4Way handshake?
