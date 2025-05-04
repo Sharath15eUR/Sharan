@@ -22,6 +22,8 @@
     2. [Module 2](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module2.md) -  SplitMAC, CAPWAP, APs, WLCs, Sniffer Mode and Monitor Mode.
     3. [Module 3](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module3.md) - DSSS,FHSS,PHY Layer, OFDM, OFDMA, MIMO ,MU-MIMO, PPDU
     4. [Module 4](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module4.md) - MAC Layer, Scanning, EAPOL, Block ACK, MSDU,MPDU etc
+    5. [Module 5](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module5.md) - Wifi 5,6,6E,7, OFDMA, TWT, MLO and Fast BSS
+    6. [Module 6](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module6.md) - Wifi Security, PMK, WEP, WPA, WPA2 ,WPA3,  
     
 ---
 ## Submission by:
