@@ -24,7 +24,10 @@
     4. [Module 4](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module4.md) - MAC Layer, Scanning, EAPOL, Block ACK, MSDU,MPDU etc
     5. [Module 5](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module5.md) - Wifi 5,6,6E,7, OFDMA, TWT, MLO and Fast BSS
     6. [Module 6](https://github.com/Sharath15eUR/Sharan/blob/main/WifiTraining/Module6.md) - Wifi Security, PMK, WEP, WPA, WPA2 ,WPA3,  
-    
+
+ - **Advance C Programming**
+    1. [Module 1](https://github.com/Sharath15eUR/Sharan/blob/main/Advance%20C%20Prog/Assignment-1) -  Structures, Pointers, Arrays
+    2. [Module 2](https://github.com/Sharath15eUR/Sharan/blob/main/Advance%20C%20Prog/Assignment-2) -  Threading
 ---
 ## Submission by:
 Name: Sharan Prakash <br>
