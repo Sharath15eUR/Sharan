@@ -9,7 +9,8 @@ Assignment for Module 2
 2. In the above program,
    - add signal handling for SIGINT (etc) and prevent termination.
    - Convert the above threads to individual functions and note down the time taken and the flow of execution.
-     
+
+### Output: Refer to [Output File](https://github.com/Sharath15eUR/Sharan/blob/main/Advance%20C%20Prog/Assignment-2/output.txt)
 3. Concepts:
    1. **Child Process fork():**
       - fork() is a system call in Unix/Linux that creates a new process.
